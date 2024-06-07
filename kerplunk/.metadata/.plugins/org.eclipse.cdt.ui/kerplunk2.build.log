@@ -1,0 +1,10 @@
+17:37:23 **** Incremental Build of configuration Debug for project kerplunk2 ****
+make -j11 all 
+arm-none-eabi-size  kerplunk2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36324	    116	   2892	  39332	   99a4	kerplunk2.elf
+Finished building: default.size.stdout
+ 
+
+17:37:23 Build Finished. 0 errors, 0 warnings. (took 216ms)
+
