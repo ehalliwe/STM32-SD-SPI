@@ -152,9 +152,9 @@ DRESULT USER_write (
   */
 #if _USE_IOCTL == 1
 DRESULT USER_ioctl (
-    BYTE pdrv,      /* Physical drive nmuber (0..) */
-    BYTE cmd,       /* Control code */
-    void *buff      /* Buffer to send/receive control data */
+	BYTE pdrv,      /* Physical drive nmuber (0..) */
+	BYTE cmd,       /* Control code */
+	void *buff      /* Buffer to send/receive control data */
 )
 {
   /* USER CODE BEGIN IOCTL */

@@ -34,7 +34,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define BUFFER_SIZE 100
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -49,7 +49,9 @@ SPI_HandleTypeDef hspi3;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
+
 char TxBuffer[250];
+uint8_t RX_Buffer[BUFFER_SIZE] = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -64,6 +66,7 @@ static void UART_Print(char* str)
 	HAL_UART_Transmit(&huart2, (uint8_t *) str, strlen(str), 100);
 }
 static void SD_Card_Test(void);
+static void SD_Card_Foo(int *cnt);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -106,8 +109,10 @@ int main(void)
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
   //Test The SD Card
-  SD_Card_Test();
-
+//  SD_Card_Test();
+  int* counter = 0;
+  SD_Card_Foo(&counter);
+//  HAL_SPI_Receive_IT(&hspi2, RX_Buffer, BUFFER_SIZE);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -117,9 +122,12 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	HAL_GPIO_TogglePin (GPIOA, GPIO_PIN_5);
-	HAL_Delay (5000);   /* Insert delay 100 ms */
-	SD_Card_Test();
+	//HAL_GPIO_TogglePin (GPIOA, GPIO_PIN_5);
+	//SD_Card_Test();
+	SD_Card_Foo(&counter);
+	HAL_Delay(1000);		/* Insert delay 100 ms */
+//	HAL_SPI_Receive_IT(&hspi2, RX_Buffer, BUFFER_SIZE);
+	counter++;
   }
   /* USER CODE END 3 */
 }
@@ -190,7 +198,7 @@ static void MX_SPI2_Init(void)
   hspi2.Instance = SPI2;
   hspi2.Init.Mode = SPI_MODE_SLAVE;
   hspi2.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi2.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi2.Init.DataSize = SPI_DATASIZE_16BIT;
   hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi2.Init.NSS = SPI_NSS_HARD_INPUT;
@@ -311,6 +319,61 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef * hspi)
+{
+    HAL_SPI_Receive_IT(&hspi2, RX_Buffer, BUFFER_SIZE);
+    HAL_UART_Transmit_IT(&huart2, RX_Buffer, BUFFER_SIZE);
+}
+
+static void SD_Card_Foo(int* cnt)
+{
+	FATFS FatFs;
+	FIL Fil;
+	FRESULT FR_Status;
+	UINT RWC, WWC, temp = *cnt; // Read/Write Word Counter
+    char RW_Buffer[200];
+    do
+    {
+    	printf(TxBuffer, "-----------Start-a-mundo--------- \r\n");
+    	UART_Print(TxBuffer);
+    	FR_Status = f_mount(&FatFs, "",1);
+    	if (FR_Status != FR_OK)
+    	{
+    		sprintf(TxBuffer, "Whilst Mounting SD Card, Error Code: (%i)\r\n", FR_Status);
+    		UART_Print(TxBuffer);
+    		break;
+    	}
+    	sprintf(TxBuffer, "SD Card Mounted Successfully! \r\n");
+    	UART_Print(TxBuffer);
+
+    FR_Status = f_open(&Fil, "bar.txt", FA_WRITE | FA_CREATE_ALWAYS);
+    FR_Status = f_lseek(&Fil, f_size(&Fil));
+    sprintf(RW_Buffer, "%d\n", temp);
+    FR_Status = f_write(&Fil, RW_Buffer, strlen(RW_Buffer), &WWC);
+    memset(RW_Buffer,'\0',sizeof(RW_Buffer)); // Clear The Buffer
+    f_close(&Fil);
+
+
+    FR_Status = f_open(&Fil, "bar.txt", FA_READ);
+    f_read(&Fil, RW_Buffer, f_size(&Fil), &RWC);
+    sprintf(TxBuffer, "simon says %s \n", RW_Buffer);
+    UART_Print(TxBuffer);
+    f_close(&Fil);
+
+    } while(0);
+   	  //------------------[ Test Complete! Unmount The SD Card ]--------------------
+   	  FR_Status = f_mount(NULL, "", 0);
+  	  if (FR_Status != FR_OK)
+      {
+          sprintf(TxBuffer, "Whilst Un-mounting SD Card, Error Code: (%i)\r\n", FR_Status);
+          UART_Print(TxBuffer);
+      } else{
+          sprintf(TxBuffer, "SD Card Un-mounted Successfully! \r\n");
+          UART_Print(TxBuffer);
+    }
+
+}
+
 static void SD_Card_Test(void)
 {
   FATFS FatFs;

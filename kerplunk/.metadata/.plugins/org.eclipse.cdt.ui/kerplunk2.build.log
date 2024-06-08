@@ -1,17 +1,10 @@
-19:16:26 **** Incremental Build of configuration Debug for project kerplunk2 ****
+21:47:29 **** Incremental Build of configuration Debug for project kerplunk2 ****
 make -j11 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "kerplunk2.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="kerplunk2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: kerplunk2.elf
- 
 arm-none-eabi-size  kerplunk2.elf 
-arm-none-eabi-objdump -h -S kerplunk2.elf  > "kerplunk2.list"
    text	   data	    bss	    dec	    hex	filename
-  36532	    116	   2980	  39628	   9acc	kerplunk2.elf
+  36280	    128	   2984	  39392	   99e0	kerplunk2.elf
 Finished building: default.size.stdout
  
-Finished building: kerplunk2.list
- 
 
-19:16:26 Build Finished. 0 errors, 0 warnings. (took 484ms)
+21:47:29 Build Finished. 0 errors, 0 warnings. (took 172ms)
 
