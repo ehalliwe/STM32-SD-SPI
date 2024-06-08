@@ -1516,3 +1516,71 @@
 2024-06-07 17:41:34,041 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
 2024-06-07 17:41:34,115 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
 2024-06-07 17:41:41,356 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 590554208 Bytes (1010827264)
+2024-06-07 18:32:54,482 [INFO] Gpio:277 - dependency for GPIO [RCC, SPI3, SYS, USART2]
+2024-06-07 18:42:38,643 [INFO] Gpio:277 - dependency for GPIO [RCC, SPI3, SYS, USART2]
+2024-06-07 18:49:19,769 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x189,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-06-07 18:52:27,186 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 444036072 Bytes (1010827264)
+2024-06-07 18:52:38,396 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 475357416 Bytes (1010827264)
+2024-06-07 18:52:40,731 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 519533544 Bytes (1010827264)
+2024-06-07 18:52:40,873 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-06-07 18:52:40,873 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-06-07 18:52:40,873 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-06-07 18:52:40,873 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-06-07 18:52:40,874 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-06-07 18:52:40,874 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-06-07 18:52:40,874 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-06-07 18:52:40,874 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FATFS
+2024-06-07 18:52:40,874 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.11.1.202404110753//db/
+2024-06-07 18:52:41,001 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/license.tmp_save
+2024-06-07 18:52:41,191 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/license.tmp
+2024-06-07 18:52:41,226 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/gpio.tmp_save
+2024-06-07 18:52:41,317 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/gpio.tmp
+2024-06-07 18:52:41,472 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-06-07 18:52:41,478 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_HalInit.tmp_save
+2024-06-07 18:52:41,578 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_HalInit.tmp
+2024-06-07 18:52:41,579 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_vars.tmp_save
+2024-06-07 18:52:41,628 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_vars.tmp
+2024-06-07 18:52:41,629 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_ext_vars.tmp_save
+2024-06-07 18:52:41,673 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_ext_vars.tmp
+2024-06-07 18:52:41,674 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_inc.tmp_save
+2024-06-07 18:52:41,721 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_inc.tmp
+2024-06-07 18:52:41,723 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-06-07 18:52:41,725 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_HalInit.tmp_save
+2024-06-07 18:52:41,770 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_HalInit.tmp
+2024-06-07 18:52:41,771 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_vars.tmp_save
+2024-06-07 18:52:41,834 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_vars.tmp
+2024-06-07 18:52:41,840 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_ext_vars.tmp_save
+2024-06-07 18:52:41,914 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_ext_vars.tmp
+2024-06-07 18:52:41,923 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_inc.tmp_save
+2024-06-07 18:52:41,988 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/fatfs_inc.tmp
+2024-06-07 18:52:41,993 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/FATFS/Target/ffconf.h_save
+2024-06-07 18:52:42,096 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/FATFS/Target/ffconf.h
+2024-06-07 18:52:42,103 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/FATFS/Target/user_diskio.c_save
+2024-06-07 18:52:42,167 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/FATFS/Target/user_diskio.c
+2024-06-07 18:52:42,169 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/FATFS/Target/user_diskio.h_save
+2024-06-07 18:52:42,218 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/FATFS/Target/user_diskio.h
+2024-06-07 18:52:42,219 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/FATFS/App/fatfs.c_save
+2024-06-07 18:52:42,273 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/FATFS/App/fatfs.c
+2024-06-07 18:52:42,275 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/FATFS/App/fatfs.h_save
+2024-06-07 18:52:42,330 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/FATFS/App/fatfs.h
+2024-06-07 18:52:42,340 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Src/stm32f4xx_it.c_save
+2024-06-07 18:52:42,477 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Src/stm32f4xx_it.c
+2024-06-07 18:52:42,478 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Inc/stm32f4xx_it.h_save
+2024-06-07 18:52:42,528 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Inc/stm32f4xx_it.h
+2024-06-07 18:52:42,539 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Src/stm32f4xx_hal_msp.c_save
+2024-06-07 18:52:42,644 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Src/stm32f4xx_hal_msp.c
+2024-06-07 18:52:42,646 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/system.tmp_save
+2024-06-07 18:52:42,701 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/MXTmpFiles/system.tmp
+2024-06-07 18:52:42,706 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Inc/stm32f4xx_hal_conf.h_save
+2024-06-07 18:52:42,769 [INFO] CodeEngine:335 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Inc/stm32f4xx_hal_conf.h
+2024-06-07 18:52:42,816 [WARN] IPConfigManager:2982 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2024-06-07 18:52:42,833 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Inc/main.h_save
+2024-06-07 18:52:42,904 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Inc/main.h
+2024-06-07 18:52:42,906 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Src/main.c_save
+2024-06-07 18:52:43,015 [INFO] CodeEngine:279 - Generated code: /Users/erik/Desktop/stmdemo/STM32-SD-SPI/kerplunk/kerplunk2/Core/Src/main.c
+2024-06-07 18:52:43,245 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 75mS.
+2024-06-07 18:52:43,255 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-06-07 18:52:43,316 [INFO] ConfigFileManager:1503 - The Die is : DIE421
+2024-06-07 18:52:45,001 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1743mS.
+2024-06-07 18:52:45,007 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-06-07 18:52:45,009 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.
