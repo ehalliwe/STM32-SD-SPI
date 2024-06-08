@@ -1,4 +1,4 @@
-21:47:26 **** Incremental Build of configuration Debug for project kerplunk2 ****
+21:53:07 **** Incremental Build of configuration Debug for project kerplunk2 ****
 make -j11 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
@@ -28,15 +28,15 @@ Finished building target: kerplunk2.elf
 arm-none-eabi-size  kerplunk2.elf 
 arm-none-eabi-objdump -h -S kerplunk2.elf  > "kerplunk2.list"
    text	   data	    bss	    dec	    hex	filename
-  36280	    128	   2984	  39392	   99e0	kerplunk2.elf
+  35068	    128	   2984	  38180	   9524	kerplunk2.elf
 Finished building: default.size.stdout
  
 Finished building: kerplunk2.list
  
-21:47:29 **** Incremental Build of configuration Debug for project kerplunk2 ****
+21:53:10 **** Incremental Build of configuration Debug for project kerplunk2 ****
 make -j11 all 
 arm-none-eabi-size  kerplunk2.elf 
    text	   data	    bss	    dec	    hex	filename
-  36280	    128	   2984	  39392	   99e0	kerplunk2.elf
+  35068	    128	   2984	  38180	   9524	kerplunk2.elf
 Finished building: default.size.stdout
  

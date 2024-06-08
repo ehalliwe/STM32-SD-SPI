@@ -125,7 +125,7 @@ int main(void)
 	//HAL_GPIO_TogglePin (GPIOA, GPIO_PIN_5);
 	//SD_Card_Test();
 	SD_Card_Foo(&counter);
-	HAL_Delay(1000);		/* Insert delay 100 ms */
+	//HAL_Delay(1000);		/* Insert delay 100 ms */
 //	HAL_SPI_Receive_IT(&hspi2, RX_Buffer, BUFFER_SIZE);
 	counter++;
   }
@@ -347,7 +347,7 @@ static void SD_Card_Foo(int* cnt)
     	UART_Print(TxBuffer);
 
     FR_Status = f_open(&Fil, "bar.txt", FA_WRITE | FA_CREATE_ALWAYS);
-    FR_Status = f_lseek(&Fil, f_size(&Fil));
+    //FR_Status = f_lseek(&Fil, f_size(&Fil));
     sprintf(RW_Buffer, "%d\n", temp);
     FR_Status = f_write(&Fil, RW_Buffer, strlen(RW_Buffer), &WWC);
     memset(RW_Buffer,'\0',sizeof(RW_Buffer)); // Clear The Buffer
